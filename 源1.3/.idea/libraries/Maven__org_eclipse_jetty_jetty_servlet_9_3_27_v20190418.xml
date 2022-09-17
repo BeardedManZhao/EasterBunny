@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.jetty:jetty-servlet:9.3.27.v20190418">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../RunTime/MAVEN/MAVEN_BASE/org/eclipse/jetty/jetty-servlet/9.3.27.v20190418/jetty-servlet-9.3.27.v20190418.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../RunTime/MAVEN/MAVEN_BASE/org/eclipse/jetty/jetty-servlet/9.3.27.v20190418/jetty-servlet-9.3.27.v20190418-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../RunTime/MAVEN/MAVEN_BASE/org/eclipse/jetty/jetty-servlet/9.3.27.v20190418/jetty-servlet-9.3.27.v20190418-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
