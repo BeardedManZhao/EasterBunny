@@ -1,5 +1,7 @@
 # ![image](https://user-images.githubusercontent.com/113756063/192142233-2e9a27be-bd96-4a4e-a536-e69480e1aa48.png) EasterBunny1.4
-Big data environment data warehouse tool, you can directly use SQL to process big data in a distributed way. This is a Spark job, which has completely encapsulated the syntax for programming, and achieved the effect of full SQL processing!
+  Big data environment data warehouse tool, you can directly use SQL to process big data in a distributed way. This is a Spark job, which has completely encapsulated the syntax for programming, and achieved the effect of full SQL processing!
+
+ - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
 
 - Required Dependencies
 
