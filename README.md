@@ -1,5 +1,5 @@
 # ![image](https://user-images.githubusercontent.com/113756063/192142233-2e9a27be-bd96-4a4e-a536-e69480e1aa48.png) EasterBunny1.4
-大数据环境数仓工具，相较于Spark，它能够让使用者的使用更加的方便
+大数据环境数仓工具，您可以直接使用SQL去分布式处理大数据，这是一个Spark的Job，针对编程进行了完全的语法封装，实现了全SQL处理的效果！
 
 - 所需依赖
 
