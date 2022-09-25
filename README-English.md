@@ -31,3 +31,5 @@ Big data environment data warehouse tool, you can directly use SQL to process bi
  When you do not have the plug-in, the system will prompt the error log of "L1 cache failure" when starting up! Be sure to import the plug-in!
   
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
+
+ - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
