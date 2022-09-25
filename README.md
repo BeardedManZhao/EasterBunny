@@ -1,4 +1,4 @@
-# ![image](https://user-images.githubusercontent.com/113756063/192141174-ef9e8139-b4db-48e6-a1d3-cf712c8fe58c.png) EasterBunny1.4
+# ![image](https://user-images.githubusercontent.com/113756063/192142233-2e9a27be-bd96-4a4e-a536-e69480e1aa48.png) EasterBunny1.4
 大数据环境数仓工具，相较于Spark，它能够让使用者的使用更加的方便
 
 - 所需依赖
@@ -12,6 +12,8 @@
 
   lib： 依赖程序存储路径，其中包含插件与依赖jar包
 
+![image](https://user-images.githubusercontent.com/113756063/192142287-ebabb07d-00f3-4b80-9d99-42bc3ab444e5.png)
+
  - 启动界面
  
  ![image](https://user-images.githubusercontent.com/113756063/192140732-6e6456e6-d287-4eae-8fca-4d130ddaf7b4.png)
@@ -22,7 +24,7 @@
  
  - 启动须知
  
-  在启动的时候会去加载 “Easter_Bunny1.4\lib\plug_in” 中的所有插件，其中必须包含一个数字验证插件（AppInit），该插件的有效期是有时间限制的，您可以通过 Releases 找到这个插件包，将其粘贴到上面所说的插件目录，然后重启本程序，即可成功更新数字验证时间！
+   在启动的时候会去加载 “Easter_Bunny1.4\lib\plug_in” 中的所有插件，其中必须包含一个数字验证插件（AppInit），该插件的有效期是有时间限制的，您可以通过 Releases 找到这个插件包，将其粘贴到上面所说的插件目录，然后重启本程序，即可成功更新数字验证时间！
   
   当您没有该插件的时候，系统启动会提示 “一级缓存失败” 的错误日志！一定要将插件导入进去哦！
   
