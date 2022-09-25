@@ -1,6 +1,8 @@
 # ![image](https://user-images.githubusercontent.com/113756063/192142233-2e9a27be-bd96-4a4e-a536-e69480e1aa48.png) EasterBunny1.4
 大数据环境数仓工具，您可以直接使用SQL去分布式处理大数据，这是一个Spark的Job，针对编程进行了完全的语法封装，实现了全SQL处理的效果！
 
+ - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
+
 - 所需依赖
 
   JDK1.8  Hadoop基本的环境配置
@@ -29,3 +31,5 @@
   当您没有该插件的时候，系统启动会提示 “一级缓存失败” 的错误日志！一定要将插件导入进去哦！
   
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
+
+ - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
