@@ -1,4 +1,4 @@
-# Implementation of user-defined data reading component（hang in the air）
+# Implementation of user-defined data reading component
 - 切换至[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
 - Introduction to Custom Data Reading Components
 
