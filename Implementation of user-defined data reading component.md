@@ -1,5 +1,5 @@
 # Implementation of user-defined data reading component（hang in the air）
-- 切换至[中文文档]()
+- 切换至[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
 - Introduction to Custom Data Reading Components
 
 The user-defined component needs to implement the interface "run_zhao. UDFDATASourceFormat", which is inherited from the initialization plug-in interface "Init_Plug_in", that is, your user-defined component can be added to EasterBunny in the following ways.
@@ -15,7 +15,7 @@ Here we will take the "DataTear" data source plug-in in "EasterBunny" as an exam
   
   * 2 Through the "UDFDATASourceFormat" interface, the location command of the component and the processing logic of the command are realized.
   
-  A call command for this component is provided in "". "EasterBunny" will find the component you specified through your data loading mode command and execute its logic. Its command processing logic is implemented in the "run (sparkSession: SparkSession, strings: Array [String]): RDD [Row]" method.
+  "GetCommand: String" provides the calling command of this component. "EasterBunny" will obtain commands through this method to match your loading mode, find the target component and execute its logic. Its command processing logic is implemented in the "run (sparkSession: SparkSession, strings: Array [String]): RDD [Row]" method.
   ![image](https://user-images.githubusercontent.com/113756063/192914783-bc9c8d8b-4825-43c2-b1e0-a2cde911ad9a.png)
 - Sample source code for custom components
 
@@ -30,24 +30,24 @@ import run_zhao.UDFDATASourceFormat
 import zhao.io.ex.CommandParsingException
 
 /**
- * DataTear数据读取组件
+ * DataTear data reading component
  *
- * 该组件能够装载到EasterBunny中，使得EasterBunny，能够通过DataTear读取数据
+ * This component can be loaded into EasterBunny to enable EasterBunny to read data through DataTear
  */
 class MAIN extends UDFDATASourceFormat {
-  // 获取到一个DataTear的数据读取组件的对象
+  // Get the object of the data reading component of a DataTear
   private val cat = new ZHAOCat()
 
   /**
-   * 该数据源组件的命令处理逻辑实现
+   * Command processing logic implementation of the data source component
    *
-   * @param sparkSession 来自EasterBunny的sparkSession对象
-   * @param strings      命令参数，第一个参数是 cat
+   * @param sparkSession SparkSession object from EasterBunny
+   * @param strings      Command parameter, the first parameter is cat
    *                     <br>
-   *                     当您的EasterBunny会话中数据加载方式（Type）参数输入为 UDF:DT=cat>DT>hdfs://out/test.txt 的时候，您的这个参数如下所示
+   *                     When the data loading method (Type) parameter input in your EasterBunny session is "UDF: DT=cat>DT> hdfs://out/test.txt "Your parameter is as follows
    *                     <br>
-   *                     Array(cat, DT, hdfs://out/test.txt)，您可以根据这个命令处理规律，来实现您需要的命令处理方式
-   * @return 加载好的RDD[Row]数据集合，这个集合最终会由EasterBunny托管
+   *                     "Array(cat, DT, hdfs://out/test.txt ）", you can implement the command processing method you need according to this command processing rule
+   * @return The loaded RDD [Row] data set will eventually be hosted by EasterBunny
    */
   override def run(sparkSession: SparkSession, strings: Array[String]): RDD[Row] = {
     if (cat.open(strings.map(_.trim))) {
@@ -66,13 +66,13 @@ class MAIN extends UDFDATASourceFormat {
   }
 
   /**
-   * @return 该初始化插件的名称
+   * @return The name of the plug-in (as the initialization plug-in)
    */
   override def getName: String = "DataTear数据读取插件"
 
   /**
-   * 插件初始化逻辑，一般就是在这里将自己添加到自定义源操作组件集合中
-   * @return 该插件是否初始化成功
+   * The plug-in initialization logic is generally to add itself to the custom source operation component collection here
+   * @return The plug-in was initialized successfully or unsuccessfully
    */
   override def run(): Boolean = {
     UDFDATASourceFormat.UDFDATA_SOURCE_FORMAT_HASH_MAP.put(getCommand, this)
@@ -81,9 +81,10 @@ class MAIN extends UDFDATASourceFormat {
 
   /**
    *
-   * @return 该插件的定位命令，如果在加载数据Type参数输入了 UDF:DT 那么代表进入到该组件的实现逻辑
+   * @return The location command of the plug-in. If "UDF: DT" is entered in the Loading Data Type parameter, it represents the implementation logic of entering the component
    */
   override def getCommand: String = "DT"
 }
 
 ```
+- 切换至[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
