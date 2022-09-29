@@ -35,3 +35,7 @@
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
 
  - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
+ - a
+<a href="[https://github.com/](https://github.com/BeardedManZhao/EasterBunny/blob/main/knowledge%20base.md)">
+ <img src = "https://user-images.githubusercontent.com/113756063/193161610-774df094-cf34-4c4e-927d-08fb629a0ff2.png"></img>
+</a>
