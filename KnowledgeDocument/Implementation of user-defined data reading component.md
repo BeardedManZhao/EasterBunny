@@ -1,5 +1,5 @@
 # Implementation of user-defined data reading component
-- 切换至[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
+- 切换至 [中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
 - Introduction to Custom Data Reading Components
 
 The user-defined component needs to implement the interface "run_zhao. UDFDATASourceFormat", which is inherited from the initialization plug-in interface "Init_Plug_in", that is, your user-defined component can be added to EasterBunny in the following ways.
@@ -87,4 +87,4 @@ class MAIN extends UDFDATASourceFormat {
 }
 
 ```
-- 切换至[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
+- 切换至 [中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/Implementation%20of%20user-defined%20data%20reading%20component-Chinese.md)
