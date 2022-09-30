@@ -67,7 +67,7 @@ public interface UDFDATASourceFormat extends Init_Plug_in {
      *                     <p>
      *                     Array(cat, DT, hdfs://out/test.txt), you can implement the command processing method you need according to this command processing rule
      * @return 加载好的RDD[Row]数据集合，这个集合最终会由EasterBunny托管
-     *
+     * <p>
      * Loaded RDD[Row] data collection, this collection will eventually be hosted by Easter Bunny.
      */
     RDD<Row> run(SparkSession sparkSession, String[] args);
