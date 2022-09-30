@@ -36,6 +36,6 @@
 
  - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
  - knowledge base
-<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/knowledge%20base.md">
+<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/knowledge%20base.md">
  <img src = "https://user-images.githubusercontent.com/113756063/193165147-ad3af8e3-8630-4f0b-83af-3e4bbed47d6d.png"/>
 </a>
