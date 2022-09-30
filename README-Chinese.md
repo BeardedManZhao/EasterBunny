@@ -33,3 +33,7 @@
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
 
  - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
+- 知识库
+<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/knowledge%20base.md">
+ <img src = "https://user-images.githubusercontent.com/113756063/193162581-14c23bbf-32a0-4299-b340-08d2644dd9af.png"/>
+</a>
