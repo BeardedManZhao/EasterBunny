@@ -2,6 +2,10 @@
   Big data environment data warehouse tool, you can directly use SQL to process big data in a distributed way. This is a Spark job, which has completely encapsulated the syntax for programming, and achieved the effect of full SQL processing!
 
  - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
+ - knowledge base
+<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/knowledge%20base.md">
+ <img src = "https://user-images.githubusercontent.com/113756063/193165147-ad3af8e3-8630-4f0b-83af-3e4bbed47d6d.png"/>
+</a>
 
 - Required Dependencies
 
@@ -35,7 +39,3 @@
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
 
  - 切换至：[中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/README-Chinese.md)
- - knowledge base
-<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/knowledge%20base.md">
- <img src = "https://user-images.githubusercontent.com/113756063/193165147-ad3af8e3-8630-4f0b-83af-3e4bbed47d6d.png"/>
-</a>
