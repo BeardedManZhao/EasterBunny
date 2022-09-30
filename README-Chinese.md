@@ -2,6 +2,10 @@
 大数据环境数仓工具，您可以直接使用SQL去分布式处理大数据，这是一个Spark的Job，针对编程进行了完全的语法封装，实现了全SQL处理的效果！
 
  - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
+- 知识库
+<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/knowledge%20base-Chinese.md">
+ <img src = "https://user-images.githubusercontent.com/113756063/193165087-b604eab3-d3cf-4b7b-abdf-7d74ec401a89.png"/>
+</a>
 
 - 所需依赖
 
@@ -33,7 +37,4 @@
 ![image](https://user-images.githubusercontent.com/113756063/192140802-835e1d6a-b934-4745-8402-e6a0bd154ae2.png)
 
  - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
-- 知识库
-<a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/knowledge%20base-Chinese.md">
- <img src = "https://user-images.githubusercontent.com/113756063/193165087-b604eab3-d3cf-4b7b-abdf-7d74ec401a89.png"/>
-</a>
+
