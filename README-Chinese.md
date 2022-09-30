@@ -35,5 +35,5 @@
  - Switch to：[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/README.md)
 - 知识库
 <a href="https://github.com/BeardedManZhao/EasterBunny/blob/main/knowledge%20base.md">
- <img src = "https://user-images.githubusercontent.com/113756063/193162581-14c23bbf-32a0-4299-b340-08d2644dd9af.png"/>
+ <img src = "https://user-images.githubusercontent.com/113756063/193165087-b604eab3-d3cf-4b7b-abdf-7d74ec401a89.png"/>
 </a>
