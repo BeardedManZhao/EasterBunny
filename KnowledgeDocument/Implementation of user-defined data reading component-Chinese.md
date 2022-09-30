@@ -1,5 +1,5 @@
 # 自定义数据读取组件的实现
-- Switch to[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component.md)
+- Switch to [English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/Implementation%20of%20user-defined%20data%20reading%20component.md)
 - 自定义数据读取组件简介
 
 自定义组件需要实现接口“run_zhao.UDFDATASourceFormat”，该接口继承自初始化插件接口“Init_plug_in”，也就是说，您的自定义组件可以通过以下方式添加到EasterBunny中。
@@ -87,4 +87,4 @@ class MAIN extends UDFDATASourceFormat {
 }
 
 ```
-- Switch to[English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/Implementation%20of%20user-defined%20data%20reading%20component.md)
+- Switch to [English document](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/Implementation%20of%20user-defined%20data%20reading%20component.md)
