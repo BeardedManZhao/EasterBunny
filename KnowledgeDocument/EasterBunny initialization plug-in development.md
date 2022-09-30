@@ -1,5 +1,5 @@
 # EasterBunny initialization plug-in development
-- 切换到 [中文文档]()
+- 切换到 [中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/EasterBunny%20initialization%20plug-in%20development-Chinese.md)
 - Introduction to Initialization Plug ins
 
 EasterBunny An interface named "config.classLoad.Init_Plug_in" is provided,This interface is used to customize a plug-in that can participate in the initialization of EasterBunny.
@@ -54,4 +54,4 @@ Click the script file in the following figure to start EasterBunny. At this time
 Next, we can see the data printed by our plug-in!!
 ![image](https://user-images.githubusercontent.com/113756063/193182506-6809551d-01fa-48b8-9be9-a499463f37b4.png)
 
-- 切换到 [中文文档]()
+- 切换到 [中文文档](https://github.com/BeardedManZhao/EasterBunny/blob/main/KnowledgeDocument/EasterBunny%20initialization%20plug-in%20development-Chinese.md)
