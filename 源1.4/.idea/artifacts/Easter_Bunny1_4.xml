@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="Easter_Bunny1.4">
     <output-path>$PROJECT_DIR$/out/artifacts/Easter_Bunny1_4</output-path>
     <root id="archive" name="Easter_Bunny1.4.jar">
-      <element id="module-output" name="源1.4" />
+      <element id="module-output" name="EasterBunny" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </element>
