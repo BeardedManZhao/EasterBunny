@@ -36,5 +36,10 @@
       <option name="name" value="com.e-iceblue" />
       <option name="url" value="https://repo.e-iceblue.cn/repository/maven-public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="a" />
+      <option name="name" value="sonatype" />
+      <option name="url" value="https://s01.oss.sonatype.org/content/repositories/snapshots" />
+    </remote-repository>
   </component>
 </project>
