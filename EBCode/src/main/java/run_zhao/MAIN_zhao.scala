@@ -54,42 +54,42 @@ object MAIN_zhao extends Logging {
           }, f_tstr = null, f_tlong = null)
           new Thread(() => WebRun.main(), "WebUI服务器").start()
           println(
-            """             >>> Welcome to My program <<<
-              |                      :oooo
-              |                       YAAAAAAs_
-              |               'AA.    ' AAAAAAAAs
-              |                !AAAA_   ' AAAAAAAAs
-              |                  VAAAAA_.   AAAAAAAAs
-              |                   !AAAAAAAA_  AAAAAAAb
-              |                     VVAAAAAAA\/VAAAAAAb
-              |                       'VVAAAAAAAXXAAAAAb        Version: 1.4
-              |                           ~~VAAAAAAAAAABb           -- 复活节兔子
-              |                                 ~~~VAAAAB__
-              |                                   ,AAAAAAAAA_
-              |                                 ,AAAAAAAAA(*)AA_
-              |            _nnnnnnnnnnnnnnmmnnAAAAAAAAAAAAA8GAAAAn_
-              |        ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo
-              |      ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf~""
-              |     ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-              |    iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP
-              |    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-              |   ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
-              |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
-              |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-              |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
-              |    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA~
-              |    YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
-              | __.'YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
-              |[AAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAA~AAAAA_
-              |(AAAAAAAAAAAAAAAAAAAAAAAAAAAAVf`   YAAAA]
-              | VAAAAAAAAAAAAAAAAAAAAAAAAAAA_      AAAAAAAs
-              |   'VVVVVVVVVVVVVVVVVVVVVVVVVV+      !VVVVVVV
-              |""".stripMargin)
+            s"""             >>> Welcome to My program <<<
+               |                      :oooo
+               |                       YAAAAAAs_
+               |               'AA.    ' AAAAAAAAs
+               |                !AAAA_   ' AAAAAAAAs
+               |                  VAAAAA_.   AAAAAAAAs
+               |                   !AAAAAAAA_  AAAAAAAb
+               |                     VVAAAAAAA\\/VAAAAAAb
+               |                       'VVAAAAAAAXXAAAAAb        Version: ${ConstantRegion.VERSION}
+               |                           ~~VAAAAAAAAAABb           -- 复活节兔子
+               |                                 ~~~VAAAAB__
+               |                                   ,AAAAAAAAA_
+               |                                 ,AAAAAAAAA(*)AA_
+               |            _nnnnnnnnnnnnnnmmnnAAAAAAAAAAAAA8GAAAAn_
+               |        ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo
+               |      ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf~""
+               |     ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+               |    iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP
+               |    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+               |   ,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+               |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+               |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+               |   [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
+               |    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA~
+               |    YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+               | __.'YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+               |[AAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAA~AAAAA_
+               |(AAAAAAAAAAAAAAAAAAAAAAAAAAAAVf`   YAAAA]
+               | VAAAAAAAAAAAAAAAAAAAAAAAAAAA_      AAAAAAAs
+               |   'VVVVVVVVVVVVVVVVVVVVVVVVVV+      !VVVVVVV
+               |""".stripMargin)
           Thread.sleep(240)
           while (status) {
             print("Liming >>> ")
             try {
-              StdIn.readLine().split("\\s+") match {
+              ConstantRegion.INVISIBLE_ALL_PATTERN.split(StdIn.readLine()) match {
                 case x if (x.head == "select" || x.head == "create" || x.head == "save" || x.head == "show" || x.head == "desc") && MODE == "sparksql" => SQL_T(x)
                 case x if x.head == "exit" => status = false
                 case a if a.mkString(" ") == "who is Master" => println("* >>> Master is " + ConfigBase.EasterBunny_Config.get("spark.master"))

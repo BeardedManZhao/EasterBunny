@@ -8,7 +8,7 @@ import scala.collection.mutable.ArrayBuffer
 
 class User_Manager {
 
-  val userList: ArrayBuffer[USER] = ArrayBuffer[USER]()
+  final val userList: ArrayBuffer[USER] = ArrayBuffer[USER]()
   var userNum = 0
 
   /**

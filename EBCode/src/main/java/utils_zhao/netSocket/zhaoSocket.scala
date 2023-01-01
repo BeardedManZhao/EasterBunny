@@ -28,10 +28,9 @@ object zhaoSocket {
   /**
    *
    * @param Data      需要发送的数据
-   * @param socket    发送数据由谁来负责
    * @param `isHTTP?` 是否发送HTTP ？
    */
-  def respinseData(Data: String, stream: BufferedOutputStream, `isHTTP?`: Boolean): Unit = {
+  def responseData(Data: String, stream: BufferedOutputStream, `isHTTP?`: Boolean): Unit = {
     if (`isHTTP?`) sendGETHEAD(Data, stream) else sandData(Data, stream)
     Thread.sleep(500)
   }

@@ -1,5 +1,6 @@
 package webMod.okhttp
 
+import run_zhao.ConstantRegion
 import utils_zhao.netSocket.zhaoSocket
 
 import java.net.Socket
@@ -28,15 +29,15 @@ import scala.collection.mutable
  * 请求解析模块
  */
 class GETRequest {
-  val Server_acc: Socket = config.WEB_ConfigBase.webUI_ServerSocket.accept()
+  final val Server_acc: Socket = config.WEB_ConfigBase.webUI_ServerSocket.accept()
   Server_acc.setTcpNoDelay(true)
-  val HTTP_STR: Array[String] = zhaoSocket.receive_Data(Server_acc.getInputStream).split("\n")
-  val HTTP_Version: String = HTTP_STR.head
+  final val HTTP_STR: Array[String] = ConstantRegion.WRAP_PATTERN.split(zhaoSocket.receive_Data(Server_acc.getInputStream))
+  final val HTTP_Version: String = HTTP_STR.head
 
   /**
    * 请求头列表
    */
-  val HTTP_KV: Map[String, String] = HTTP_STR.splitAt(1)._2.flatMap(_.split("\n")).map(kv => {
+  final val HTTP_KV: Map[String, String] = HTTP_STR.splitAt(1)._2.flatMap(ConstantRegion.WRAP_PATTERN.split(_)).map(kv => {
     val KV = kv.split(": ")
     KV.head -> KV.last
   }).toMap
@@ -44,11 +45,11 @@ class GETRequest {
   /**
    * 所有参数列表
    */
-  val HTTP_KV2: mutable.HashMap[String, String] = mutable.HashMap[String, String]() ++ {
-    val x = HTTP_KV.getOrElse("Referer", s"http://127.0.0.1:${config.WEB_ConfigBase.webUI_port}/?name=zhao").split("[?]")
+  final val HTTP_KV2: mutable.HashMap[String, String] = mutable.HashMap[String, String]() ++ {
+    val x = ConstantRegion.QUESTION_MARK_PATTERN.split(HTTP_KV.getOrElse("Referer", s"http://127.0.0.1:${config.WEB_ConfigBase.webUI_port}/?name=zhao"))
     val strings = x(0).split(config.WEB_ConfigBase.webUI_port.toString)
     if (x.nonEmpty && x.length > 1) {
-      x.last.split("&").map(_.split("=")).filter(_.length > 1).map(kv => kv(0) -> kv(1)).toMap ++ Map("path" -> {
+      ConstantRegion.ATTRIBUTE_SEGMENTATION.split(x.last).map(ConstantRegion.EQ_PATTERN.split(_)).filter(_.length > 1).map(kv => kv(0) -> kv(1)).toMap ++ Map("path" -> {
         if (strings.length <= 1) "/" else strings.last
       })
     } else {

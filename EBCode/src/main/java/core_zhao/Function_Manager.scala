@@ -16,18 +16,12 @@ import scala.collection.mutable
 class Function_Manager extends project {
 
   /**
-   * 函数列表
-   */
-  lazy val FunctionsList: String = MAIN_zhao.st_sql.getMapList(CON.toMap, 80)
-  lazy val searcher = new DbSearcher(new DbConfig(), ConfigBase.ipBase_dir)
-
-  /**
    * 函数库列表 String结果值
    *
    * 其中的元素是函数特质 每一个元素代表一个函数 一个特质中有三个成员 分别是函数的 名字 介绍 和实现
    * 此处的函数返回值都是String
    */
-  lazy val FB_STR: Seq[Function_STR_CLASS] = Seq(
+  lazy final val FB_STR: Seq[Function_STR_CLASS] = Seq(
     new Function_STR_CLASS {
       override val Function_Name: String = "zhao_String"
       override val Function_Schema: String = "形参(x): 会接收一个任意数值类型的参数 将其转化为String。"
@@ -35,13 +29,12 @@ class Function_Manager extends project {
       override def Function_algorithm: Any => String = x => x.toString
     }
   )
-
   /**
    * 函数库列表 String结果值  这里的函数具有两个形参
    * 其中的元素是函数特质 每一个元素代表一个函数 一个特质中有三个成员 分别是函数的 名字 介绍 和实现
    * 此处的函数返回值都是String
    */
-  lazy val FB_TSTR: Seq[Function_TSTR_CLASS] = Seq(
+  lazy final val FB_TSTR: Seq[Function_TSTR_CLASS] = Seq(
     new Function_TSTR_CLASS {
       override val Function_Name: String = "format_MS"
       override val Function_Schema: String = "形参(str, MS): 分别是日期格式的描述和日期毫秒值，将其转化为指定的日期格式"
@@ -65,14 +58,13 @@ class Function_Manager extends project {
       }
     }
   )
-
   /**
    * 函数库列表 String结果值
    *
    * 其中的元素是函数特质 每一个元素代表一个函数 一个特质中有三个成员 分别是函数的 名字 介绍 和实现
    * 此处的函数返回值都是 Long
    */
-  lazy val FB_Long: Seq[Function_Long_CLASS] = Seq(
+  lazy final val FB_Long: Seq[Function_Long_CLASS] = Seq(
     new Function_Long_CLASS {
       override val Function_Name: String = "step"
       override val Function_Schema: String = "形参(x): 求x! 注意 这里的 x 不得 >= 20 更不可违反数学规则。"
@@ -92,7 +84,12 @@ class Function_Manager extends project {
   /**
    * todo 函数解释器
    */
-  override val CON: mutable.Map[String, String] = mutable.Map()
+  override final val CON: mutable.Map[String, String] = mutable.Map()
+  /**
+   * 函数列表
+   */
+  lazy val FunctionsList: String = MAIN_zhao.st_sql.getMapList(CON.toMap, 80)
+  lazy val searcher = new DbSearcher(new DbConfig(), ConfigBase.ipBase_dir)
 
   /**
    * todo 这里是命令解析模块 会根据命令参数 使用不同的处理方案

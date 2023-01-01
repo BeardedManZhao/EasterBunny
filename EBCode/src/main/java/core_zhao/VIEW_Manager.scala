@@ -5,7 +5,7 @@ import core_zhao.sqlParsing.Grammar
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.{Dataset, Row}
 import run_zhao.MAIN_zhao.sc_sql
-import run_zhao.{MAIN_zhao, UDFDATASourceFormat}
+import run_zhao.{ConstantRegion, MAIN_zhao, UDFDATASourceFormat}
 import utils_zhao.dataSink.DataSaveMySQL
 import utils_zhao.dataSrcHbase.DataFromHbase
 
@@ -20,7 +20,7 @@ class VIEW_Manager(Grammars: Array[Grammar]) extends project {
   /**
    * todo 数据路径与数据表 匹配器
    */
-  override val CON: mutable.Map[String, String] = mutable.Map()
+  override final val CON: mutable.Map[String, String] = mutable.Map()
 
   var BackData: Dataset[Row] = _
 
@@ -62,9 +62,9 @@ class VIEW_Manager(Grammars: Array[Grammar]) extends project {
     DataSrc_type_str match {
       case "text" => D_(
         sc_sql.createDataFrame(sc_sql.sparkContext.textFile(args(2))
-          .flatMap(_.split("\n"))
+          .flatMap(ConstantRegion.WRAP_PATTERN.split(_))
           .map(line => {
-            Row.fromSeq(line.trim.split("\\s+").toSeq.map(_.trim))
+            Row.fromSeq(ConstantRegion.INVISIBLE_ALL_PATTERN.split(line))
           }), getSchame(StructType_Schame)), args)
       case "json" => D_(
         if (StructType_Schame.length == 0) {
@@ -95,10 +95,10 @@ class VIEW_Manager(Grammars: Array[Grammar]) extends project {
       case x => val strings: Array[String] = x.split(':')
         if (strings.length > 1) {
           // 提取出来操作格式与参数行 被提取格式应如：UDF:DT=cat....
-          val command = strings(1).split("=") // Array(DT, cat...)
+          val command = ConstantRegion.EQ_PATTERN.split(strings(1)) // Array(DT, cat...)
           val format = UDFDATASourceFormat.UDFDATA_SOURCE_FORMAT_HASH_MAP.get(command.head) // 使用DT
           if (format != null) {
-            val isC = (command.last + (if (strings.length > 2) ":" + strings(2) else "")).split(">+")
+            val isC = ConstantRegion.UDF_COMMAND_PATTERN.split(command.last + (if (strings.length > 2) ":" + strings(2) else ""))
             println("* >>> 解析：" + isC.mkString(" "))
             D_(sc_sql.createDataFrame(format.run(sc_sql, isC), getSchame(StructType_Schame)), args) // 使用参数行
           } else {
@@ -119,7 +119,7 @@ class VIEW_Manager(Grammars: Array[Grammar]) extends project {
   def getSchame(`col:type`: Array[String]): StructType = {
     val StructField_List: ListBuffer[StructField] = ListBuffer()
     for (ct <- `col:type`) {
-      val ct0001 = ct.split(":")
+      val ct0001 = ConstantRegion.COLON_PATTERN.split(ct)
       `:: StructField`(StructField_List, ct0001)
     }
     StructType(StructField_List)
@@ -205,9 +205,9 @@ class VIEW_Manager(Grammars: Array[Grammar]) extends project {
    */
   @Deprecated
   def getTypeRow(Line: String, args: Array[String]): Row = {
-    val datas = Line.trim.split("\\s+").toSeq.map(_.trim)
+    val AllData = ConstantRegion.INVISIBLE_ALL_PATTERN.split(Line.trim)
     val new_seq: ListBuffer[Any] = ListBuffer()
-    for (v <- datas; t <- args.map(_.split(":").last)) {
+    for (v <- AllData; t <- args.map(ConstantRegion.COLON_PATTERN.split(_).last)) {
       new_seq.append {
         t match {
           case "Double" => v.toDouble

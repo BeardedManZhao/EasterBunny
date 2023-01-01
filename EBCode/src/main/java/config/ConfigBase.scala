@@ -9,13 +9,13 @@ object ConfigBase {
   /**
    * 所有配置集合
    */
-  lazy val EasterBunny_Config: mutable.HashMap[String, String] = new mutable.HashMap[String, String]() ++ sc_sql.conf.getAll
+  lazy final val EasterBunny_Config: mutable.HashMap[String, String] = new mutable.HashMap[String, String]() ++ sc_sql.conf.getAll
 
   /**
    * IP库位置 是IP解析模块的主要组件
    */
-  lazy val ipBase_dir: String = EasterBunny_Config.getOrElse("ipBase.dir", "不可变 >> conf/ip2region.db << IP库文件。")
-  lazy val configFile: String =
+  lazy final val ipBase_dir: String = EasterBunny_Config.getOrElse("ipBase.dir", "不可变 >> conf/ip2region.db << IP库文件。")
+  lazy final val configFile: String =
     """
       |#
       |#             ____________________________________________________
@@ -71,8 +71,8 @@ object ConfigBase {
       |webui.Thread.image.service = true
       |""".stripMargin
 
-  lazy val MySQL_Driver: String = sc_sql.conf.get("mysql.jdbc.driver")
-  lazy val Writer_Partitions: String = {
+  lazy final val MySQL_Driver: String = sc_sql.conf.get("mysql.jdbc.driver")
+  lazy final val Writer_Partitions: String = {
     try {
       sc_sql.conf.get("writer.partitions")
     } catch {
@@ -85,7 +85,7 @@ object ConfigBase {
    *
    * @todo 注意 该设置项，不可直接读取来自 SparkSession 的源，应采取直接获取配置集合中的数据
    */
-  lazy val ISHive: Boolean = {
+  lazy final val ISHive: Boolean = {
     st_sql
       .appConfig
       .properties

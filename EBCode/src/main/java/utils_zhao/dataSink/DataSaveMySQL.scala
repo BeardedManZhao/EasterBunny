@@ -12,14 +12,14 @@ object DataSaveMySQL {
    * @tparam >>> Dataset的类型 这里是隐式转换，不需要手动干预
    */
   def save[>>>](dataset: Dataset[>>>], `IP:Port>>>user>>>password>>>DataBase.Table`: String): Unit = {
-    val ipupd: Array[String] = `IP:Port>>>user>>>password>>>DataBase.Table`.split(">>>")
+    val ipUpd: Array[String] = `IP:Port>>>user>>>password>>>DataBase.Table`.split(">>>")
     dataset.write.format("jdbc")
       .option("driver", ConfigBase.MySQL_Driver)
       .option("numPartitions", ConfigBase.Writer_Partitions) // 设置并发
-      .option("url", s"jdbc:mysql://${ipupd.head}/?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true")
-      .option("user", ipupd(1))
-      .option("password", ipupd(2))
-      .option("dbtable", ipupd(3))
+      .option("url", s"jdbc:mysql://${ipUpd.head}/?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true")
+      .option("user", ipUpd(1))
+      .option("password", ipUpd(2))
+      .option("dbtable", ipUpd(3))
       .mode("overwrite")
       .save()
   }

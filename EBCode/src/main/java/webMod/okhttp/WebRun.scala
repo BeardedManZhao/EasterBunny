@@ -6,7 +6,7 @@ import webMod.userWeb.User_Manager
 
 object WebRun extends Logging {
 
-  val userManager: User_Manager = new User_Manager
+  final val userManager: User_Manager = new User_Manager
   if (config.WEB_ConfigBase.webui_TimingClear_ms > 0) {
     try {
       TimingClearUserHis(config.WEB_ConfigBase.webui_TimingClear_ms)
