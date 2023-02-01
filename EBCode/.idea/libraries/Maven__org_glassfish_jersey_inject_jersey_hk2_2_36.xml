@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.jersey.inject:jersey-hk2:2.36">
+    <CLASSES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/glassfish/jersey/inject/jersey-hk2/2.36/jersey-hk2-2.36.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/glassfish/jersey/inject/jersey-hk2/2.36/jersey-hk2-2.36-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/glassfish/jersey/inject/jersey-hk2/2.36/jersey-hk2-2.36-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

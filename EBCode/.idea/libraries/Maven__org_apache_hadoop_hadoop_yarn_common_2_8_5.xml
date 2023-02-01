@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hadoop:hadoop-yarn-common:2.8.5">
+    <CLASSES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/apache/hadoop/hadoop-yarn-common/2.8.5/hadoop-yarn-common-2.8.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/apache/hadoop/hadoop-yarn-common/2.8.5/hadoop-yarn-common-2.8.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/org/apache/hadoop/hadoop-yarn-common/2.8.5/hadoop-yarn-common-2.8.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

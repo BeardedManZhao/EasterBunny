@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.dropwizard.metrics:metrics-graphite:4.2.7">
+    <CLASSES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/io/dropwizard/metrics/metrics-graphite/4.2.7/metrics-graphite-4.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/io/dropwizard/metrics/metrics-graphite/4.2.7/metrics-graphite-4.2.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/RunTime/MAVEN/MAVEN_BASE/io/dropwizard/metrics/metrics-graphite/4.2.7/metrics-graphite-4.2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
