@@ -6,7 +6,7 @@
     <groupId>groupId</groupId>
     <artifactId>easterBunny</artifactId>
     <packaging>pom</packaging>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.5</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
